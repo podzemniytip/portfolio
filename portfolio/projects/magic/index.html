@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Волшебство · Детский центр</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Nunito:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-portfolio" href="../../index.html#works">← назад в портфолио</a>
+
+  <header class="top">
+    <h1 class="logo">Волшебство</h1>
+    <nav>
+      <a href="#classes">Кружки</a>
+      <a href="#trial">Пробное</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__cloud"></div>
+      <div class="hero__row">
+        <div class="hero__words">
+          <p class="hero__wink">для детей 3–12 лет</p>
+          <h2 class="hero__title">Тут учатся, играют<br />и смеются громко</h2>
+          <p class="hero__text">Демо-лендинг центра: творчество, логика, движение. Родителям — спокойствие.</p>
+        </div>
+        <div class="hero__3d">
+          <canvas id="magic-canvas" aria-hidden="true"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="kids-photo" aria-labelledby="kids-photo-cap">
+      <img src="images/kids.jpg" alt="Ребёнок улыбается — фото Unsplash" width="1200" height="800" loading="lazy" />
+      <p id="kids-photo-cap" class="kids-photo__cap">Настоящие эмоции · фото Unsplash (скачано локально)</p>
+    </section>
+
+    <section id="classes" class="classes">
+      <h2 class="section-title">Наши кружки</h2>
+      <div class="classes__grid">
+        <div class="blob-card">
+          <h3>Рисование</h3>
+          <p>Акварель, коллаж, «грязные» руки — как надо.</p>
+        </div>
+        <div class="blob-card blob-card--yellow">
+          <h3>Лего-роботы</h3>
+          <p>Собираем, программируем, гоняем по полу.</p>
+        </div>
+        <div class="blob-card blob-card--mint">
+          <h3>Театр</h3>
+          <p>Голос, пластика, маленькие премьеры раз в сезон.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trial" class="trial">
+      <div class="trial__paper">
+        <h2>Запись на пробное</h2>
+        <p>Оставьте заявку — мы перезвоним и подберём группу.</p>
+        <form class="trial__form" onsubmit="event.preventDefault(); alert('Демо: форма не отправляется.');">
+          <label>Имя родителя<input type="text" required placeholder="Как вас зовут" /></label>
+          <label>Телефон<input type="tel" required placeholder="+7" /></label>
+          <label>Возраст ребёнка<input type="text" placeholder="например, 7 лет" /></label>
+          <button type="submit">Отправить ✎</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <p>Демо «Волшебство» · Three.js · портфолио</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>

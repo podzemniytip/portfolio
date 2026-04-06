@@ -1,0 +1,10 @@
+# OS / IDE
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# Cursor / editor (опционально)
+.cursor/
+
+creative-director-skill/

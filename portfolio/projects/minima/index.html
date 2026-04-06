@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Минима · Архитектурное бюро</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=DM+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-portfolio" href="../../index.html#works">← Портфолио</a>
+
+  <header class="head">
+    <span class="mark">MINIMA</span>
+    <nav>
+      <a href="#work">Проекты</a>
+      <a href="#about">О бюро</a>
+      <a href="#contact">Контакт</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__visual">
+        <canvas id="minima-canvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="hero__copy">
+        <p class="hero__issue">Est. 2014 — Moscow</p>
+        <h1 class="hero__title">Пространство<br /><em>как тишина</em></h1>
+        <p class="hero__lead">Частные дома, публичные интерьеры и реконструкция. Монохром, материал, пропорция. Демо-сайт.</p>
+      </div>
+    </section>
+
+    <figure class="photo-band">
+      <img src="images/architecture.jpg" alt="Современное здание, монохром — фото Unsplash" width="1200" height="675" loading="lazy" />
+      <figcaption>Референс материала и линии · Unsplash (локальный файл)</figcaption>
+    </figure>
+
+    <section id="work" class="work">
+      <h2 class="visually-hidden">Избранные проекты</h2>
+      <div class="work__grid">
+        <article class="work__item">
+          <span class="work__num">01</span>
+          <h3>Дом на склоне</h3>
+          <p>Бетон, дерево, панорамное остекление. 280 м².</p>
+        </article>
+        <article class="work__item">
+          <span class="work__num">02</span>
+          <h3>Галерея Linen</h3>
+          <p>Белый куб, рассеянный свет. Реконструкция склада.</p>
+        </article>
+        <article class="work__item">
+          <span class="work__num">03</span>
+          <h3>Офис потока</h3>
+          <p>Открытые планы, акустические панели, зелёные зоны.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about__col">
+        <h2>Метод</h2>
+        <p>Мы начинаем с контекста участка и света. Никаких декоративных слоёв ради тренда — только то, что усиливает жизнь внутри.</p>
+      </div>
+      <div class="about__col about__col--narrow">
+        <p class="about__stat">42<br /><span>объекта</span></p>
+        <p class="about__stat">12<br /><span>наград</span></p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Связаться</h2>
+      <p><a href="mailto:hello@minima.demo">hello@minima.demo</a></p>
+      <p class="contact__addr">Москва, набережная (вымышленно)</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© Демо «Минима» · Three.js wireframe · портфолио</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>
