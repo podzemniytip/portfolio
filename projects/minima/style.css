@@ -1,0 +1,303 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.65;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.back-portfolio {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  color: #111;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid #111;
+  background: #fff;
+}
+
+.back-portfolio:hover {
+  background: #111;
+  color: #fafafa;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem clamp(1.25rem, 5vw, 4rem) 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mark {
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.45em;
+  font-size: 0.75rem;
+}
+
+.head nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.head a {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  text-decoration: none;
+}
+
+.head a:hover {
+  color: #111;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem clamp(1.25rem, 5vw, 4rem) 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 55vh;
+}
+
+.hero__visual {
+  position: relative;
+  min-height: 280px;
+  border: 1px solid #e0e0e0;
+}
+
+#minima-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+}
+
+.hero__copy {
+  max-width: 540px;
+}
+
+.photo-band {
+  margin: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 clamp(1.25rem, 5vw, 4rem) 3rem;
+}
+
+.photo-band img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+.photo-band figcaption {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 0.75rem;
+}
+
+.hero__issue {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.35em;
+  color: #888;
+  margin: 0 0 2rem;
+}
+
+.hero__title {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(2.75rem, 8vw, 5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+}
+
+.hero__title em {
+  font-style: italic;
+}
+
+.hero__lead {
+  max-width: 36ch;
+  font-size: 1.05rem;
+  color: #444;
+  margin: 0;
+}
+
+.work {
+  padding: 4rem clamp(1.25rem, 5vw, 4rem);
+  border-top: 1px solid #111;
+}
+
+.work__grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.work__item {
+  padding: 2.5rem 2rem;
+  border-right: 1px solid #ddd;
+  min-height: 280px;
+}
+
+.work__item:last-child {
+  border-right: none;
+}
+
+.work__num {
+  font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: #999;
+}
+
+.work__item h3 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 1rem 0 0.75rem;
+}
+
+.work__item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem clamp(1.25rem, 5vw, 4rem);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  border-top: 1px solid #111;
+}
+
+.about h2 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0 0 1.5rem;
+}
+
+.about__col p {
+  margin: 0;
+  color: #444;
+  max-width: 48ch;
+}
+
+.about__col--narrow {
+  display: flex;
+  gap: 2rem;
+}
+
+.about__stat {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin: 0;
+}
+
+.about__stat span {
+  display: block;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  margin-top: 0.5rem;
+}
+
+.contact {
+  padding: 5rem clamp(1.25rem, 5vw, 4rem) 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #111;
+}
+
+.contact h2 {
+  font-family: "Cinzel", serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  margin: 0 0 1rem;
+}
+
+.contact a {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 2rem;
+  color: #111;
+}
+
+.contact__addr {
+  margin: 1rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.foot {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .hero__visual {
+    order: -1;
+    min-height: 220px;
+  }
+
+  .work__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work__item {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Юрий · Веб-разработчик · Портфолио</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Cinzel:wght@500;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&family=Orbitron:wght@500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="preloader" class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <p class="preloader__tag">RUNNER.LANE.INIT</p>
+      <div class="preloader__bar"><span class="preloader__fill"></span></div>
+      <p class="preloader__pct">0%</p>
+    </div>
+  </div>
+
+  <div id="cursor" class="cursor" aria-hidden="true"></div>
+  <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="#hero" class="logo">YU<span class="logo__accent">RI</span></a>
+    <nav class="nav" aria-label="Основная навигация">
+      <a href="#about">Обо мне</a>
+      <a href="#works">Работы</a>
+      <a href="#game">Игра</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <canvas id="hero-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__grid"></div>
+      <div class="hero__content reveal">
+        <p class="hero__eyebrow">Junior Front-end · Чистый стек</p>
+        <h1 class="hero__title">Привет, я <span class="hero__name">Юрий</span>. Создаю современные и креативные веб-сайты.</h1>
+        <p class="hero__lead">HTML · CSS · JavaScript · Three.js — без фреймворков, с вниманием к деталям и атмосфере.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#works">Смотреть работы</a>
+          <a class="btn btn--ghost" href="#game">Забежать в игру</a>
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">SCROLL</div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="section__head reveal">
+        <h2>Обо мне</h2>
+        <p class="section__sub">Коротко о пути</p>
+      </div>
+      <div class="about__body reveal">
+        <p>Я начал с любопытства к тому, как устроены сайты изнутри, и быстро увлёкся визуальной частью и интерактивом. Сейчас собираю проекты на «чистом» стеке, экспериментирую с Three.js и анимациями.</p>
+        <p>Мне важно, чтобы интерфейс не только работал, но и запоминался — как хороший кадр из фильма или уровень в игре.</p>
+      </div>
+    </section>
+
+    <section id="works" class="section works">
+      <div class="section__head reveal">
+        <h2>Мои работы</h2>
+        <p class="section__sub">Каждая карточка ведёт на <strong>отдельный полноценный лендинг</strong> в своём стиле (демо-проекты).</p>
+      </div>
+
+      <div class="works__grid">
+        <!-- 1 Neon → отдельный лендинг -->
+        <a
+          href="projects/neon/index.html"
+          class="project-card project-card--neon reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: кофейня «Неон»"
+        >
+          <div class="project-card--neon__glow"></div>
+          <div class="project-card--neon__content">
+            <span class="project-card--neon__tag">24/7 · CITY</span>
+            <h3>Кофейня «Неон»</h3>
+            <p>Лендинг ночной кофейни с меню и доставкой. Неон, контраст и ритм большого города.</p>
+            <span class="project-card--neon__cta">VIEW TERMINAL →</span>
+          </div>
+        </a>
+
+        <!-- 2 Minima -->
+        <a
+          href="projects/minima/index.html"
+          class="project-card project-card--minima reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: архитектурное бюро «Минима»"
+        >
+          <div class="project-card--minima__inner">
+            <p class="project-card--minima__issue">Vol. 04 — Architecture</p>
+            <h3>Архитектурное бюро «Минима»</h3>
+            <p class="project-card--minima__desc">Сайт-визитка в духе глянца: типографика, воздух, монохром.</p>
+            <div class="project-card--minima__line"></div>
+          </div>
+        </a>
+
+        <!-- 3 Magic kids -->
+        <a
+          href="projects/magic/index.html"
+          class="project-card project-card--magic reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: детский центр «Волшебство»"
+        >
+          <div class="project-card--magic__blob"></div>
+          <div class="project-card--magic__inner">
+            <h3>Детский центр «Волшебство»</h3>
+            <p>Расписание кружков и запись на пробное занятие. Тёплый, «скетчовый» тон.</p>
+            <span class="project-card--magic__scribble">улыбка гарантирована!</span>
+          </div>
+        </a>
+
+        <!-- 4 Prana yoga -->
+        <a
+          href="projects/prana/index.html"
+          class="project-card project-card--prana reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: студия йоги «Прана»"
+        >
+          <svg class="project-card--prana__wave" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,60 Q100,20 200,60 T400,60 L400,120 L0,120 Z" fill="currentColor" opacity="0.15"/>
+          </svg>
+          <div class="project-card--prana__content">
+            <h3>Студия йоги «Прана»</h3>
+            <p>Абонементы, расписание практик, медитации онлайн. Спокойный органический визуальный язык.</p>
+          </div>
+        </a>
+
+        <!-- 5 Meme agency -->
+        <a
+          href="projects/meme/index.html"
+          class="project-card project-card--meme reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: агентство «Мем-маркетинг»"
+        >
+          <div class="project-card--meme__stamp">HYPE</div>
+          <div class="project-card--meme__layer project-card--meme__layer--back"></div>
+          <div class="project-card--meme__content">
+            <h3>Агентство «Мем-маркетинг»</h3>
+            <p>SMM с иронией: кейсы, вирусные форматы, брутальная вёрстка «как в ленте».</p>
+          </div>
+        </a>
+
+        <!-- 6 Future Archive + Three.js -->
+        <a
+          href="projects/future/index.html"
+          class="project-card project-card--future reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: бренд одежды «Future Archive»"
+        >
+          <canvas id="future-archive-canvas" class="project-card--future__canvas" width="320" height="200"></canvas>
+          <div class="project-card--future__overlay">
+            <span class="project-card--future__label">3D CAPSULE</span>
+            <h3>Бренд одежды «Future Archive»</h3>
+            <p>Лукбук и дропы коллекций. Лёгкая 3D-сцена как витрина digital-мерча.</p>
+          </div>
+        </a>
+
+        <!-- 7 Mechanic glass -->
+        <a
+          href="projects/mechanic/index.html"
+          class="project-card project-card--mechanic reveal"
+          data-cursor="lg"
+          aria-label="Открыть лендинг: автосервис «Механика»"
+        >
+          <div class="project-card--mechanic__panel">
+            <div class="project-card--mechanic__rivet" aria-hidden="true"></div>
+            <div class="project-card--mechanic__rivet project-card--mechanic__rivet--br" aria-hidden="true"></div>
+            <h3>Автосервис «Механика»</h3>
+            <p>Запись на ТО, прайс, статус ремонта. Стекло, металл, индустриальный UI.</p>
+            <span class="project-card--mechanic__badge">SERVICE · ON</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="game" class="section game-section">
+      <div class="section__head reveal">
+        <h2>Lane Runner</h2>
+        <p class="section__sub">Пробел или тап — прыжок. Тот же неон, что и на сайте.</p>
+      </div>
+      <div class="game-section__wrap reveal">
+        <div class="game-frame">
+          <canvas id="game-canvas" width="900" height="360" aria-label="Мини-игра раннер"></canvas>
+          <div id="game-ui" class="game-ui">
+            <span class="game-ui__score">Очки: <strong id="score-val">0</strong></span>
+            <p class="game-ui__hint">Пробел / тап — прыжок</p>
+          </div>
+          <div id="game-over" class="game-over" hidden>
+            <p class="game-over__title">Столкновение</p>
+            <p class="game-over__score">Счёт: <span id="final-score">0</span></p>
+            <button type="button" id="restart-btn" class="btn btn--primary">Restart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section__head reveal">
+        <h2>Контакты</h2>
+        <p class="section__sub">Свяжитесь для проекта или вакансии</p>
+      </div>
+      <div class="contact__grid reveal">
+        <form class="contact__form" action="#" method="post" onsubmit="return false;">
+          <label>
+            <span>Имя</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="ваш@email.ru" />
+          </label>
+          <label>
+            <span>Сообщение</span>
+            <textarea name="message" rows="4" placeholder="Кратко о задаче"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Отправить</button>
+        </form>
+        <div class="contact__links">
+          <p>Или напрямую:</p>
+          <a href="https://t.me/ChainZenit" class="contact__link" data-cursor="lg" rel="noopener noreferrer" target="_blank">Telegram @ChainZenit</a>
+          <a href="https://github.com/podzemniytip" class="contact__link" data-cursor="lg" rel="noopener noreferrer" target="_blank">GitHub</a>
+          <a href="mailto:podzemniytip@yandex.ru" class="contact__link" data-cursor="lg">podzemniytip@yandex.ru</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Юрий · Портфолио · HTML / CSS / JS</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

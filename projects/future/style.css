@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: #060608;
+  color: #e8e6f0;
+  line-height: 1.6;
+}
+
+.back-portfolio {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 20;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: #a855f7;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: rgba(6, 6, 8, 0.85);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4.5rem 1.5rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+}
+
+.head nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.head a {
+  color: #8a8799;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.head a:hover {
+  color: #2ee6d6;
+}
+
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem 1.5rem 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#hero-3d {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero__text {
+  position: relative;
+  z-index: 2;
+  max-width: 420px;
+  background: linear-gradient(90deg, rgba(6, 6, 8, 0.95) 40%, transparent);
+  padding: 1rem 1rem 1rem 0;
+}
+
+.hero__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #a855f7;
+  margin: 0 0 0.75rem;
+}
+
+.hero h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  line-height: 1.05;
+  margin: 0 0 1rem;
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #2ee6d6, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero__text > p:nth-of-type(2) {
+  color: #8a8799;
+  margin: 0 0 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid #2ee6d6;
+  color: #2ee6d6;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: #2ee6d6;
+  color: #060608;
+}
+
+.drop,
+.lookbook {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.drop h2,
+.lookbook h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  margin: 0 0 2rem;
+  color: #a855f7;
+}
+
+.drop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.piece {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.piece:hover {
+  border-color: rgba(46, 230, 214, 0.4);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+.piece__img {
+  aspect-ratio: 3/4;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.piece__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.35s ease;
+}
+
+.piece:hover .piece__img img {
+  transform: scale(1.06);
+  filter: brightness(1.08);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  border-radius: 12px;
+}
+
+.piece h3 {
+  font-family: "Syne", sans-serif;
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+}
+
+.piece p {
+  margin: 0;
+  color: #2ee6d6;
+  font-size: 0.9rem;
+}
+
+.lookbook p {
+  color: #8a8799;
+  max-width: 480px;
+}
+
+.lookbook__collage {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.lookbook__collage > img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.lookbook__3d-wrap {
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+#lookbook-3d {
+  width: 100%;
+  height: 180px;
+  display: block;
+}
+
+.lookbook__3d-wrap span {
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: #a855f7;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 768px) {
+  .lookbook__collage {
+    grid-template-columns: 1fr;
+  }
+
+  .lookbook__collage > img {
+    height: 200px;
+  }
+}
+
+.foot {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 0.8rem;
+  color: #5c5866;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-end;
+    min-height: 70vh;
+  }
+
+  .hero__text {
+    background: rgba(6, 6, 8, 0.88);
+    padding: 1rem;
+    max-width: none;
+  }
+}

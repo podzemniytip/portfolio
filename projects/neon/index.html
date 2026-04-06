@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Неон · Ночная кофейня</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-portfolio" href="../../index.html#works">← К портфолио</a>
+
+  <header class="site-head">
+    <span class="logo">NEON<span class="logo-dot">_</span>BREW</span>
+    <nav class="nav">
+      <a href="#menu">Меню</a>
+      <a href="#delivery">Доставка</a>
+      <a href="#hours">Часы</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <canvas id="neon-canvas" class="hero__canvas3d" aria-hidden="true"></canvas>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__tag">OPEN 22:00 — 08:00</p>
+        <h1>Кофе, который<br /><span class="hero__accent">не спит</span></h1>
+        <p class="hero__lead">Синтетический эспрессо, холодные напитки и ночная доставка по центру. Демо-лендинг для портфолио.</p>
+        <a class="btn btn--neon" href="#menu">Смотреть меню</a>
+      </div>
+    </section>
+
+    <section class="section vibe" aria-labelledby="vibe-title">
+      <div class="vibe__grid">
+        <figure class="vibe__figure">
+          <img src="images/coffee.jpg" alt="Чашка кофе в тёплом свете — фото с Unsplash" width="1200" height="800" loading="lazy" />
+          <figcaption id="vibe-title">Атмосфера бара · фото для демо</figcaption>
+        </figure>
+        <div class="vibe__text">
+          <h2>Запах зерна и экранов</h2>
+          <p>Живое фото рядом с 3D в hero — так лендинг ощущается «настоящим», а не только неоном в CSS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu">
+      <h2>Терминал меню</h2>
+      <p class="section__sub">Выберите модуль</p>
+      <div class="menu__grid">
+        <article class="drink-card">
+          <h3>Black ICE</h3>
+          <p>Эспрессо, лёд, цитрус</p>
+          <span class="price">190 ₽</span>
+        </article>
+        <article class="drink-card">
+          <h3>Neon Latte</h3>
+          <p>Матча, молоко овсяное</p>
+          <span class="price">240 ₽</span>
+        </article>
+        <article class="drink-card">
+          <h3>Synth Mocha</h3>
+          <p>Шоколад 72%, двойной шот</p>
+          <span class="price">260 ₽</span>
+        </article>
+        <article class="drink-card">
+          <h3>Data Drip</h3>
+          <p>Фильтр, сезонный сироп</p>
+          <span class="price">210 ₽</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="delivery" class="section delivery">
+      <div class="delivery__panel">
+        <h2>Доставка по району</h2>
+        <p>Курьер на электро до 35 минут. Минимальный заказ 500 ₽. Зона — внутри кольца (вымышленно).</p>
+        <ul>
+          <li>Трекинг в реальном времени</li>
+          <li>Оплата картой / SberPay</li>
+          <li>Ночная наценка не взимается</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="hours" class="section hours">
+      <h2>Режим</h2>
+      <div class="hours__table">
+        <div><span>Пн — Чт</span><strong>22:00 — 08:00</strong></div>
+        <div><span>Пт — Вс</span><strong>круглосуточно</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <p>© Демо «Неон» · HTML / CSS / Three.js · фото Unsplash (локально)</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>
