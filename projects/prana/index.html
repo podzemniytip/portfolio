@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прана · Студия йоги</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-portfolio" href="../../index.html#works">← в портфолио</a>
+
+  <header class="head">
+    <span class="brand">Прана</span>
+    <nav>
+      <a href="#schedule">Расписание</a>
+      <a href="#pricing">Абонементы</a>
+      <a href="#calm">О студии</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <svg class="hero__curve" viewBox="0 0 400 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 Q100,0 200,40 T400,35 L400,80 L0,80 Z" fill="currentColor" />
+      </svg>
+      <div class="hero__split">
+        <div class="hero__inner">
+          <p class="hero__eyebrow">Йога · медитация · дыхание</p>
+          <h1>Найдите свой<br />спокойный ритм</h1>
+          <p>Небольшие группы, мягкий свет и внимательные преподаватели. Демо-страница студии.</p>
+        </div>
+        <div class="hero__viz">
+          <canvas id="prana-canvas" aria-hidden="true"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="zen-photo">
+      <img src="images/yoga.jpg" alt="Практика йоги, спокойная поза — фото Unsplash" width="1200" height="800" loading="lazy" />
+      <p>Дыхание и пространство · Unsplash (локально)</p>
+    </section>
+
+    <section id="schedule" class="schedule">
+      <h2>Неделя</h2>
+      <div class="schedule__list">
+        <div class="row"><span>Понедельник</span><span>Виньяса 19:00</span></div>
+        <div class="row"><span>Среда</span><span>Инь 20:00</span></div>
+        <div class="row"><span>Пятница</span><span>Хатха 18:30</span></div>
+        <div class="row"><span>Воскресенье</span><span>Медитация 10:00</span></div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Абонементы</h2>
+      <div class="pricing__grid">
+        <article class="plan">
+          <h3>Лотос</h3>
+          <p class="plan__price">2 400 ₽</p>
+          <p>4 занятия в месяц</p>
+        </article>
+        <article class="plan plan--featured">
+          <h3>Дерево</h3>
+          <p class="plan__price">4 900 ₽</p>
+          <p>8 занятий + 1 гостевое</p>
+        </article>
+        <article class="plan">
+          <h3>Онлайн</h3>
+          <p class="plan__price">990 ₽</p>
+          <p>Месяц записей практик</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="calm" class="calm">
+      <blockquote>«Мы не гонимся за идеальной чакрой — только за честным дыханием сегодня.»</blockquote>
+      <p class="calm__note">Демо-текст · портфолио</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© Демо «Прана» · Three.js · Unsplash</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>

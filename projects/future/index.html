@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Archive · Одежда</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="back-portfolio" href="../../index.html#works">← portfolio</a>
+
+  <header class="head">
+    <span class="logo">FUTURE ARCHIVE</span>
+    <nav>
+      <a href="#drop">Дроп</a>
+      <a href="#lookbook">Лукбук</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <canvas id="hero-3d" aria-hidden="true"></canvas>
+    <div class="hero__text">
+      <p class="hero__label">COLLECTION 09</p>
+      <h1>Цифровой<br /><span>силуэт</span></h1>
+      <p>Капсула tech-wear: оверсайз, рефлектив, минимум швов. Демо-лендинг бренда.</p>
+      <a class="btn" href="#drop">Смотреть дроп</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="drop" class="drop">
+      <h2>Дроп</h2>
+      <div class="drop__grid">
+        <article class="piece">
+          <div class="piece__img">
+            <img src="images/fashion-1.jpg" alt="Модный показ, одежда — Unsplash" width="900" height="1200" loading="lazy" />
+          </div>
+          <h3>Shell Parka</h3>
+          <p>12 900 ₽</p>
+        </article>
+        <article class="piece">
+          <div class="piece__img">
+            <img src="images/fashion-2.jpg" alt="Портрет в стиле fashion — Unsplash" width="900" height="1200" loading="lazy" />
+          </div>
+          <h3>Mesh Layer</h3>
+          <p>4 200 ₽</p>
+        </article>
+        <article class="piece">
+          <div class="piece__img">
+            <img src="images/fashion-3.jpg" alt="Лук в чёрном — Unsplash" width="900" height="1200" loading="lazy" />
+          </div>
+          <h3>Utility Vest</h3>
+          <p>7 600 ₽</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="lookbook" class="lookbook">
+      <h2>Лукбук</h2>
+      <p>Ночной город, неон, пустые парковки. Съёмка для портфолио-демо.</p>
+      <div class="lookbook__collage">
+        <img src="images/fashion-2.jpg" alt="" width="400" height="500" loading="lazy" />
+        <div class="lookbook__3d-wrap glass">
+          <canvas id="lookbook-3d" aria-hidden="true"></canvas>
+          <span>orbit ring</span>
+        </div>
+        <img src="images/fashion-3.jpg" alt="" width="400" height="500" loading="lazy" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© Demo · Two Three.js scenes · Unsplash локально</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

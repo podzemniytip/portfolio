@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Mono", monospace;
+  background: #f5f500;
+  color: #0a0a0a;
+  line-height: 1.4;
+  overflow-x: hidden;
+}
+
+.back-portfolio {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.4rem 0.6rem;
+  border: 3px solid #0a0a0a;
+  background: #fff;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  transform: rotate(-2deg);
+}
+
+.back-portfolio:hover {
+  background: #0a0a0a;
+  color: #f5f500;
+}
+
+.stamp {
+  position: fixed;
+  top: 4rem;
+  right: 1rem;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid #0a0a0a;
+  transform: rotate(12deg);
+  background: #fff;
+  z-index: 10;
+}
+
+.glitch-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  border-top: 4px solid #0a0a0a;
+  border-bottom: 4px solid #0a0a0a;
+}
+
+.glitch-hero__3d {
+  min-height: 220px;
+  border-right: 4px solid #0a0a0a;
+  background: repeating-linear-gradient(
+    45deg,
+    #ebe300,
+    #ebe300 10px,
+    #f5f500 10px,
+    #f5f500 20px
+  );
+}
+
+#meme-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+}
+
+.glitch-hero__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.glitch-hero__img img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.15) saturate(1.1);
+  transform: scale(1.02);
+}
+
+.chaos-head {
+  padding: 2rem 1rem 3rem;
+  padding-left: 8vw;
+}
+
+.mega {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(4rem, 18vw, 10rem);
+  line-height: 0.85;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.shift {
+  display: inline-block;
+  transform: translate(12vw, -0.1em) rotate(-1deg);
+  text-shadow: 4px 4px 0 #fff;
+}
+
+.tagline {
+  margin: 1rem 0 0;
+  font-size: 0.75rem;
+  border-top: 4px solid #0a0a0a;
+  display: inline-block;
+  padding-top: 0.5rem;
+}
+
+.cases {
+  padding: 2rem 1rem 4rem;
+  display: grid;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tilt {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  margin: 0;
+  transform: skewX(-6deg);
+}
+
+.case {
+  padding: 1.5rem;
+  border: 4px solid #0a0a0a;
+  background: #fff;
+  position: relative;
+}
+
+.case--a {
+  transform: rotate(-0.5deg) translateX(-2vw);
+}
+
+.case--b {
+  transform: rotate(0.8deg) translateX(4vw);
+  margin-top: -1rem;
+}
+
+.case__metric {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.case h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.case p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 4px solid #0a0a0a;
+}
+
+.block {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  padding: 2rem 1rem;
+  border: 2px solid #0a0a0a;
+  text-align: center;
+  margin: -2px;
+  transition: background 0.15s;
+}
+
+.block:hover {
+  background: #0a0a0a;
+  color: #f5f500;
+}
+
+.block--2 {
+  transform: translateY(8px);
+}
+
+.block--4 {
+  transform: translate(-4px, -4px);
+}
+
+.cta {
+  padding: 4rem 1rem;
+  text-align: center;
+  border-top: 4px solid #0a0a0a;
+}
+
+.cta p {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+}
+
+.cta a {
+  color: #0a0a0a;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+}
+
+.end {
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.65rem;
+  border-top: 4px solid #0a0a0a;
+}
+
+@media (max-width: 600px) {
+  .glitch-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .glitch-hero__3d {
+    border-right: none;
+    border-bottom: 4px solid #0a0a0a;
+  }
+
+  .shift {
+    transform: none;
+  }
+
+  .case--a,
+  .case--b {
+    transform: none;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, sans-serif;
+  background: linear-gradient(180deg, #fff5f8 0%, #f0f7ff 50%, #fff9f0 100%);
+  color: #3d2c3d;
+  line-height: 1.6;
+}
+
+.back-portfolio {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1rem;
+  color: #e0567a;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  border: 2px dashed #e0567a;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 1.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-family: "Architects Daughter", cursive;
+  font-size: 2rem;
+  margin: 0;
+  transform: rotate(-2deg);
+  color: #5b4a6b;
+}
+
+.top nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.top a {
+  font-weight: 700;
+  color: #e0567a;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.top a:hover {
+  text-decoration: underline wavy;
+}
+
+.hero {
+  position: relative;
+  padding: 2rem 1.5rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.hero__words {
+  text-align: center;
+}
+
+.hero__3d {
+  min-height: 200px;
+  border-radius: 24px;
+  border: 3px dashed rgba(255, 107, 157, 0.35);
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+}
+
+#magic-canvas {
+  display: block;
+  width: 100%;
+  height: 220px;
+}
+
+.kids-photo {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  padding: 0 1.5rem;
+}
+
+.kids-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px 8px 24px 12px;
+  border: 3px solid #3d2c3d;
+  box-shadow: 6px 8px 0 rgba(255, 200, 87, 0.45);
+}
+
+.kids-photo__cap {
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+  color: #e0567a;
+  margin: 0.75rem 0 0;
+  font-size: 1rem;
+}
+
+.hero__cloud {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  top: 0;
+  right: 10%;
+  background: radial-gradient(circle, rgba(255, 200, 220, 0.9), transparent 70%);
+  border-radius: 50%;
+  filter: blur(4px);
+  pointer-events: none;
+}
+
+.hero__wink {
+  font-family: "Architects Daughter", cursive;
+  color: #e0567a;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero__title {
+  font-family: "Architects Daughter", cursive;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  transform: rotate(-1deg);
+}
+
+.hero__text {
+  max-width: 420px;
+  margin: 0 auto;
+  color: #6b5a6b;
+}
+
+.section-title {
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.75rem;
+  text-align: center;
+  margin: 0 0 2rem;
+  color: #5b4a6b;
+}
+
+.classes {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.classes__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.blob-card {
+  padding: 1.75rem;
+  border-radius: 32px 12px 28px 16px;
+  background: #fff;
+  border: 3px dashed rgba(255, 107, 157, 0.35);
+  box-shadow: 6px 10px 0 rgba(255, 200, 87, 0.35);
+  transition: transform 0.2s;
+}
+
+.blob-card:hover {
+  transform: rotate(-1deg) scale(1.02);
+}
+
+.blob-card--yellow {
+  box-shadow: 6px 10px 0 rgba(180, 220, 160, 0.5);
+  border-color: rgba(255, 193, 7, 0.45);
+}
+
+.blob-card--mint {
+  border-color: rgba(72, 209, 204, 0.4);
+  box-shadow: 6px 10px 0 rgba(72, 209, 204, 0.25);
+}
+
+.blob-card h3 {
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+}
+
+.blob-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #6b5a6b;
+}
+
+.trial {
+  padding: 2rem 1.5rem 4rem;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.trial__paper {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px 24px 12px 20px;
+  border: 3px solid #3d2c3d;
+  box-shadow: 8px 8px 0 #ffc857;
+}
+
+.trial__paper h2 {
+  font-family: "Architects Daughter", cursive;
+  margin: 0 0 0.5rem;
+}
+
+.trial__paper > p {
+  margin: 0 0 1.5rem;
+  color: #6b5a6b;
+}
+
+.trial__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.trial__form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.trial__form input {
+  padding: 0.65rem 0.85rem;
+  border: 2px dashed #e0567a;
+  border-radius: 12px;
+  font-family: inherit;
+}
+
+.trial__form button {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  font-family: "Architects Daughter", cursive;
+  font-size: 1.15rem;
+  background: #e0567a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.trial__form button:hover {
+  filter: brightness(1.05);
+}
+
+.bottom {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: #9a8a9a;
+}
+
+@media (max-width: 640px) {
+  .hero__row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__words {
+    order: 1;
+  }
+
+  .hero__3d {
+    order: 0;
+  }
+}

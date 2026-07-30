@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Механика · Автосервис</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-noise" aria-hidden="true"></div>
+  <a class="back-portfolio" href="../../index.html#works">← Портфолио</a>
+
+  <header class="head">
+    <div class="head__brand">
+      <span class="rivet" aria-hidden="true"></span>
+      <h1>Механика</h1>
+      <p>СТО · Диагностика · Кузов</p>
+    </div>
+    <a class="head__phone" href="tel:+78000000000">+7 (800) 000-00-00</a>
+  </header>
+
+  <main>
+    <section class="showcase">
+      <div class="showcase__photo">
+        <img src="images/garage.jpg" alt="Автосервис, подъёмник — фото Unsplash" width="1200" height="800" loading="lazy" />
+      </div>
+      <div class="showcase__3d glass">
+        <p class="showcase__label">LIVE PART</p>
+        <canvas id="mechanic-canvas" aria-hidden="true"></canvas>
+        <p class="showcase__hint">3D-элемент как на главном портфолио — вращающийся «узел».</p>
+      </div>
+    </section>
+
+    <section class="hero glass">
+      <h2>Запись на сервис онлайн</h2>
+      <p>Выберите услугу, дату и марку авто — подтвердим слот за 15 минут (демо).</p>
+      <form class="quick-form" onsubmit="event.preventDefault(); alert('Демо: заявка не уходит.');">
+        <input type="text" placeholder="Марка и модель" required />
+        <input type="tel" placeholder="Телефон" required />
+        <button type="submit">Записаться</button>
+      </form>
+    </section>
+
+    <section class="services">
+      <h2>Услуги и цены</h2>
+      <div class="filters" role="tablist" aria-label="Категории">
+        <button type="button" class="filter is-active" data-filter="all">Все</button>
+        <button type="button" class="filter" data-filter="to">ТО</button>
+        <button type="button" class="filter" data-filter="diag">Диагностика</button>
+        <button type="button" class="filter" data-filter="body">Кузов</button>
+      </div>
+      <div class="table glass">
+        <div class="table__row" data-cat="to">
+          <span>ТО-1 (масло + фильтры)</span><span>от 4 500 ₽</span>
+        </div>
+        <div class="table__row" data-cat="to">
+          <span>ТО-2 (расширенный)</span><span>от 8 200 ₽</span>
+        </div>
+        <div class="table__row" data-cat="diag">
+          <span>Компьютерная диагностика</span><span>1 200 ₽</span>
+        </div>
+        <div class="table__row" data-cat="diag">
+          <span>Развал-схождение</span><span>от 2 800 ₽</span>
+        </div>
+        <div class="table__row" data-cat="body">
+          <span>Покраска элемента</span><span>от 12 000 ₽</span>
+        </div>
+        <div class="table__row" data-cat="body">
+          <span>PDR (без покраски)</span><span>от 3 500 ₽</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="status glass">
+      <h2>Статус ремонта</h2>
+      <p>Введите номер заказа в личном кабинете (в демо — заглушка). Прозрачные этапы: принято → в работе → готово.</p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>Демо «Механика» · glass UI · портфолио</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="scene.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
