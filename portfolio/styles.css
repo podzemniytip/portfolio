@@ -75,6 +75,67 @@ a { color: inherit; text-decoration: none; }
 .project-link:hover .project-visual { transform: scale(.992); }
 .project-visual { transition: transform .5s cubic-bezier(.2,.8,.2,1); }
 
+.project-radar { background: #071111; }
+.radar-visual {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at center, rgba(35,245,188,.11), transparent 48%),
+    linear-gradient(135deg, #0a1716, #050909 72%);
+}
+.radar-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(35,245,188,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35,245,188,.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.radar-circle {
+  position: absolute;
+  aspect-ratio: 1;
+  border: 1px solid rgba(35,245,188,.24);
+  border-radius: 50%;
+}
+.radar-circle-a { width: 27%; }
+.radar-circle-b { width: 51%; }
+.radar-circle-c { width: 76%; }
+.radar-axis { position: absolute; background: rgba(35,245,188,.16); }
+.radar-axis-x { width: 76%; height: 1px; }
+.radar-axis-y { width: 1px; height: 76%; }
+.radar-sweep {
+  position: absolute;
+  width: 38%;
+  aspect-ratio: 1;
+  left: 50%;
+  top: 12%;
+  transform-origin: 0 100%;
+  background: linear-gradient(132deg, rgba(35,245,188,.24), transparent 58%);
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  animation: radar-sweep 5s linear infinite;
+}
+.radar-blip {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 6px rgba(35,245,188,.08), 0 0 26px var(--signal);
+  animation: radar-blip 2.5s ease-in-out infinite;
+}
+.radar-blip-a { top: 29%; right: 30%; }
+.radar-blip-b { bottom: 31%; left: 27%; animation-delay: -.8s; }
+.radar-blip-c { top: 52%; right: 20%; animation-delay: -1.6s; }
+.radar-status,
+.radar-coordinates {
+  position: absolute;
+  font: 400 9px var(--mono);
+  letter-spacing: .18em;
+  color: var(--signal);
+}
+.radar-status { top: 35px; right: 40px; }
+.radar-coordinates { bottom: 35px; left: 40px; color: var(--paper-dim); }
+
 .chatter-visual { background: radial-gradient(circle at 58% 48%, rgba(35,245,188,.2), transparent 9%), radial-gradient(circle at center, #1a201e, #0b0c0b 65%); }
 .orbit { position: absolute; border: 1px solid rgba(35,245,188,.36); border-radius: 50%; inset: 50%; transform: translate(-50%,-50%); }
 .orbit-one { width: 53%; aspect-ratio: 1; animation: rotate 13s linear infinite; border-style: dashed; }
@@ -119,6 +180,8 @@ a { color: inherit; text-decoration: none; }
 .hero-title .line:nth-child(2) { transition-delay: .1s; }
 
 @keyframes rotate { to { transform: translate(-50%,-50%) rotate(360deg); } }
+@keyframes radar-sweep { to { transform: rotate(360deg); } }
+@keyframes radar-blip { 50% { opacity: .35; transform: scale(.65); } }
 @keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(0,185,133,0); } }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
